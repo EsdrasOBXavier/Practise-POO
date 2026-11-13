@@ -1,13 +1,44 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+    Pokemon pikachu = new Pokemon("Pikachu", "Eletrico", "Eletrico" , 50, 100, 100);
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
-}
+    Pokemon charizard = new Pokemon("Charizard", "Fogo", "Voador", 70, 110, 110);
+
+    Treinador t1 = new Treinador("OCabaLá", pikachu);
+
+    Treinador t2 = new Treinador("OtoCabaLá", charizard);
+
+    Batalha batalha = new Batalha();
+
+    batalha.iniciarBatalha(t1, t2);
+
+    System.out.println("\n===== RESULTADOS =====");
+
+    t1.TrainerStatus();
+    System.out.println("---------------------");
+
+    t2.TrainerStatus();
+
+    charizard.PokemonStatus();
+
+   /* treinador.atacarTreinador(treinador2);
+    System.out.println("---------------------");
+
+    pikachu.atacar(charizard);
+    System.out.println("---------------------");
+
+    charizard.atacar(pikachu);
+    System.out.println("---------------------");
+
+    pikachu.atacar(charizard);
+    System.out.println("---------------------");
+
+    treinador.TrainerStatus();
+    System.out.println("---------------------");
+
+    treinador2.TrainerStatus();
+    System.out.println("---------------------");*/
+
+    }
+
