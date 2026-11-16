@@ -47,7 +47,7 @@ public class Pokemon {
         this.vidaMaxima = vidaMaxima;
     }
 
-    public void atacar(Pokemon alvo) {
+    public void realizarAtaquePokemon(Pokemon alvo) {
 
         System.out.println(this.nomePokemon + " está atacando!");
 
@@ -72,12 +72,12 @@ public class Pokemon {
     }
 
    public void PokemonStatus(){
-       System.out.println("---------------------");
+       System.out.println("======================");
        System.out.println("Nome: " + this.getNomePokemon());
        System.out.println("Vida total deste pokemon: " + this.getVidaMaxima());
        System.out.println("Vida restante deste pokemon: " + this.getVida());
        System.out.println("Ataque deste pokemon: " + this.getAtaque());
-       System.out.println("---------------------");
+       System.out.println("======================");
 
    }
 

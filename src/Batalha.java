@@ -1,49 +1,49 @@
 
  public class Batalha {
 
-        public void iniciarBatalha(Treinador treinador1,
-                                   Treinador treinador2) {
+        public void iniciarBatalha(Treinador desafiante,
+                                   Treinador desafiado) {
 
-            boolean turnoTreinador1 = true;
+            boolean turnoDesafiante = true;
 
             System.out.println("===== INICIO DA BATALHA =====");
 
-            while (!treinador1.pokemonFoiDerrotado() &&
-                    !treinador2.pokemonFoiDerrotado()) {
+            while (!desafiante.pokemonFoiDerrotado() &&
+                    !desafiado.pokemonFoiDerrotado()) {
 
-                if (turnoTreinador1) {
+                if (turnoDesafiante) {
 
-                    System.out.println("\nTurno de " + treinador1.getNomeTreinador());
+                    System.out.println("Turno de " + desafiante.getNomeTreinador());
                     System.out.println("---------------------");
 
-                    treinador1.atacar(treinador2);
+                    desafiante.atacarAdversario(desafiado);
 
                 } else {
 
-                    System.out.println("\nTurno de " + treinador2.getNomeTreinador());
+                    System.out.println("Turno de " + desafiado.getNomeTreinador());
                     System.out.println("---------------------");
 
-                    treinador2.atacar(treinador1);
+                    desafiado.atacarAdversario(desafiante);
                 }
 
-                turnoTreinador1 = !turnoTreinador1;
+                turnoDesafiante = !turnoDesafiante;
             }
 
-            if (treinador1.pokemonFoiDerrotado()) {
+            if (desafiante.pokemonFoiDerrotado()) {
 
-                treinador1.registrarDerrota();
-                treinador2.registrarVitoria();
+                desafiante.registrarDerrota();
+                desafiado.registrarVitoria();
 
-                System.out.println("---------------------");
-                System.out.println(treinador2.getNomeTreinador() +" venceu!");
+                System.out.println("===== RESULTADOS =====");
+                System.out.println(desafiado.getNomeTreinador() +" venceu!");
 
             } else {
 
-                treinador2.registrarDerrota();
-                treinador1.registrarVitoria();
+                desafiado.registrarDerrota();
+                desafiante.registrarVitoria();
 
                 System.out.println("---------------------");
-                System.out.println(treinador1.getNomeTreinador() +" venceu!");
+                System.out.println(desafiante.getNomeTreinador() +" venceu!");
             }
 
             System.out.println("---------------------");

@@ -41,8 +41,8 @@ public class Treinador {
         this.quantVitorias = 0;
     }
 
-    public void atacar(Treinador adversario) {
-        this.pokemon.atacar(adversario.pokemon);
+    public void atacarAdversario(Treinador adversario) {
+        this.pokemon.realizarAtaquePokemon(adversario.pokemon);
     }
 
     public void registrarVitoria() {
@@ -58,6 +58,7 @@ public class Treinador {
     }
 
     public void TrainerStatus(){
+        System.out.println("======================");
         System.out.println("Treinador: " + this.getNomeTreinador());
         System.out.println("Vitórias: " + this.quantVitorias);
         System.out.println("Derrotas: " + this.quantDerrotas);
@@ -68,5 +69,9 @@ public class Treinador {
         System.out.println("Vida: " + pokemon.getVida());
     }
 
+    public void TrainerPokemonStatus(){
+        this.TrainerStatus();
+        pokemon.PokemonStatus();
+    }
 
 }
